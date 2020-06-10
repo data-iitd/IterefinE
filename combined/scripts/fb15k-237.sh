@@ -19,7 +19,7 @@ do
 	mv out fb15k-237_$episode/out
 	rm -rf out
 	mkdir NN_data
-	python3 evaluate_and_update_sid.py rel_predicts.txt data/test_relations.txt cat_predicts.txt data/test_labels.txt data/dev_relations.txt data/dev_labels.txt
+	python3 evaluate_and_update.py rel_predicts.txt data/test_relations.txt cat_predicts.txt data/test_labels.txt data/dev_relations.txt data/dev_labels.txt
 	python3 generate_types.py cat_predicts.txt data/names.txt data/subclass.txt data/domain.txt data/range.txt 
 	end=`date +%s`
 	dt=$(echo "$end - $start" | bc)

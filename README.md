@@ -20,6 +20,33 @@ stdbuf -oL ./scripts/nell_ConvE_dev.sh 6 &> nell_ConvE.log
 stdbuf -oL ./scripts/yago_ConvE_new.sh 6 &> yago_ConvE.log
 stdbuf -oL ./scripts/wn18rr_ConvE.sh 6 &> wn18rr_ConvE.log
 ```
+To run alpha type models, use the command given below-
+```
+python3 evaluate_and_update.py PSLKGI_rel_predicts.txt data/test_relations.txt cat_predicts.txt data/test_labels.txt data/dev_relations.txt data/dev_labels.txt neural_dev_labels.txt neural_dev_predictions.txt neural_test_labels.txt neural_test_predictions.txt 
+```
+To prepare the graph showing the variation of performance with iterations-
+```
+python3 create_pdf_graphs2.py 
+```
+To run experiments using only one class of ontology rules-
+```
+./dom_ran.sh
+./nell_only_dom_ran.sh
+./nell_only_inv.sh
+./fb15k237_only_dom_ran.sh
+./fb15k237_only_inv.sh
+```
+To run experiments excluding one class of ontology rules-
+```
+./nell_subclass.sh
+./nell_range.sh
+./nell_mut.sh
+./nell_rmut.sh
+./fb15k-237_mut.sh
+./fb15k-237_domain.sh
+./fb15k-237_subclass.sh
+```
+
 
 To run the standalonne embedding methods, go to neural folder and run the following script-
 ```
