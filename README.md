@@ -48,8 +48,7 @@ To run experiments excluding one class of ontology rules-
 ```
 
 
-To run the standalonne embedding methods, go to neural folder and run the following script-
+To run the standalone embedding methods --namely, ComplEx and ConvE models, on all datasets, go to neural folder and run the following script:
 ```
 ./train_script.sh
 ```
-Here it runs the ComplEx and ConvE on all the datasets.
