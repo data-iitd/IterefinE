@@ -21,8 +21,7 @@ stdbuf -oL ./scripts/yago_ConvE_new.sh 6 &> yago_ConvE.log
 stdbuf -oL ./scripts/wn18rr_ConvE.sh 6 &> wn18rr_ConvE.log
 ```
 
-To run the standalonne embedding methods, go to neural folder and run the following script-
+To run the standalone embedding methods --namely, ComplEx and ConvE models, on all datasets, go to neural folder and run the following script:
 ```
 ./train_script.sh
 ```
-Here it runs the ComplEx and ConvE on all the datasets.
